@@ -1,0 +1,7 @@
+/* Developer Desk Component Styles */
+.developerDesk {
+  position: relative;
+}
+
+/* This file is for any additional styling that might be needed for the 3D component */
+/* Most styling is handled through Three.js materials and properties */

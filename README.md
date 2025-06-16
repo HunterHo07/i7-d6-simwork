@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 SimWork - The Future of Work Simulation
 
-## Getting Started
+**An immersive 2.5D/3D open-world simulation platform that replicates the future of work**
 
-First, run the development server:
+SimWork is a revolutionary MVP simulation platform that combines real-world functionality, immersive frontend effects, and instant-ready product visuals for startups, demos, and investors. Built with cutting-edge web technologies to deliver a Ragnarok Online-style open world experience.
+
+## 🌟 Key Features
+
+- **2.5D Open Office Simulation**: Users explore a stylized office map and navigate to task zones
+- **Real Tools Embedded**: Cloud IDE, form fillers, design canvas, and markdown notes
+- **Quest Engine**: AI-generated role-specific quests and tasks
+- **Freelancer Discovery**: View nearby users, profiles, and completed tasks
+- **User Profiles & Rewards**: Badges, XP, and proof-of-skill cards
+
+## 🎯 Target Audience
+
+- Tech recruiters & HR managers
+- Bootcamp students, junior talent, freelancers
+- Corporates and L&D teams
+- Hiring platforms and training providers
+
+## 🏗️ Tech Stack
+
+- **Framework**: Next.js 15 with TypeScript
+- **3D Engine**: Three.js with React Three Fiber
+- **Animation**: GSAP with ScrollTrigger
+- **Styling**: CSS-only (no Tailwind classes in components)
+- **Game Engine**: Phaser3 for 2.5D interactions
+- **Assets**: Kenney.nl free 3D assets
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎮 World Design
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Inspired by Ragnarok Online's isometric perspective and open-world design:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Office Buildings**: Multi-floor workspaces with different departments
+- **Streets & Outdoor Areas**: Connecting pathways between buildings
+- **Coffee Shops**: Social spaces for networking and breaks
+- **Residential Areas**: Player housing and customization
+- **Interactive Zones**: Developer desks, design bays, PM boardrooms
 
-## Learn More
+## 📋 Development Phases
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 1 (MVP)
+- ✅ 2.5D Open Office Map with walkable navigation
+- ✅ Embedded real tools and task completion
+- ✅ AI-generated quests per role
+- ✅ Public user profiles and freelancer discovery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Phase 2
+- Desktop/mobile app versions
+- Expanded quest chains and multiplayer features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Phase 3
+- VR/AR office simulation
+- Team quests and company workspaces
 
-## Deploy on Vercel
+## 🎨 Visual Style
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Futuristic Theme**: AI-like design with game-style elements
+- **2.5D/3D Assets**: Real modeling and open-world environments
+- **Parallax Effects**: Multi-layer backgrounds with scroll animations
+- **Interactive UI**: GSAP-powered micro-interactions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Links
+
+- **Developer**: [HunterHo07](https://github.com/HunterHo07)
+- **Portfolio**: [hunterho07.github.io](https://hunterho07.github.io/Portfolio_1/)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**"Prove your skills. Play your job."** - SimWork revolutionizes learning, hiring, and upskilling by simulating how work actually happens.

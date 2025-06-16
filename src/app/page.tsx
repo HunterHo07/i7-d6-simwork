@@ -1,103 +1,97 @@
-import Image from "next/image";
+'use client';
+
+import dynamic from 'next/dynamic';
+import HeroSection from '@/components/sections/HeroSection';
+
+// Dynamic import for 3D components to avoid SSR issues
+const SimWorldPreview = dynamic(() => import('@/components/world/SimWorldPreview'), {
+  ssr: false,
+  loading: () => (
+    <div className="world-loading">
+      <div className="loading-spinner"></div>
+      <p>Loading SimWork World...</p>
+    </div>
+  )
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="homepage">
+      <HeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="world-preview-section">
+        <div className="section-header">
+          <h2>Experience the Future of Work</h2>
+          <p>Step into our 2.5D open world and explore what makes SimWork revolutionary</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <SimWorldPreview />
+      </section>
+
+      <section className="features-section">
+        <div className="container">
+          <h2>Why SimWork?</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">🎮</div>
+              <h3>Immersive 2.5D World</h3>
+              <p>Navigate a Ragnarok Online-inspired office environment with real workstations and interactive zones.</p>
+              <a href="/live-preview" className="feature-link">Try Demo →</a>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🛠️</div>
+              <h3>Real Tools Embedded</h3>
+              <p>Use actual development tools, design software, and project management interfaces within the game world.</p>
+              <a href="/live-preview" className="feature-link">Explore Tools →</a>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🎯</div>
+              <h3>AI-Powered Quests</h3>
+              <p>Complete realistic work tasks generated by AI that match your skill level and career goals.</p>
+              <a href="/live-preview" className="feature-link">Start Quest →</a>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">👥</div>
+              <h3>Freelancer Discovery</h3>
+              <p>Connect with talented professionals and showcase your skills through completed quests and achievements.</p>
+              <a href="/sign-up" className="feature-link">Join Now →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Section */}
+      <section className="navigation-section">
+        <div className="container">
+          <h2>Explore SimWork</h2>
+          <div className="nav-grid">
+            <a href="/live-preview" className="nav-card">
+              <div className="nav-icon">🎮</div>
+              <h3>Live Demo</h3>
+              <p>Experience our 2.5D world and interactive workstations</p>
+            </a>
+            <a href="/pitch-deck" className="nav-card">
+              <div className="nav-icon">📊</div>
+              <h3>Pitch Deck</h3>
+              <p>See our vision, market opportunity, and business model</p>
+            </a>
+            <a href="/why-us" className="nav-card">
+              <div className="nav-icon">🏆</div>
+              <h3>Why Us</h3>
+              <p>Learn about our competitive advantages and team</p>
+            </a>
+            <a href="/roadmap" className="nav-card">
+              <div className="nav-icon">🗺️</div>
+              <h3>Roadmap</h3>
+              <p>Follow our development journey and future plans</p>
+            </a>
+            <a href="/sign-up" className="nav-card">
+              <div className="nav-icon">🚀</div>
+              <h3>Get Started</h3>
+              <p>Join our beta and be part of the future of work</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
