@@ -1,5 +1,9 @@
+packages:
+  - .
 allowBuilds:
   esbuild: true
   sharp: true
   canvas: true
   unrs-resolver: true
+overrides:
+  postcss: ^8.5.15
